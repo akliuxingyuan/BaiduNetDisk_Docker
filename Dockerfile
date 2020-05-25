@@ -1,4 +1,5 @@
 FROM ubuntu:18.04
+ENV DEBIAN_FRONTEND noninteractive
 RUN apt update && \
     apt install --no-install-recommends apt-utils wget desktop-file-utils libnss3 libgtk-3-0 libx11-xcb-dev libxss1 fonts-wqy-microhei fonts-wqy-zenhei xfonts-wqy libcanberra-gtk3-module -y
 RUN cd /tmp && \
