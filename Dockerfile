@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 RUN apt update && \
-    apt install wget desktop-file-utils libnss3 libgtk-3-0 libx11-xcb-dev libxss1 fonts-wqy-microhei fonts-wqy-zenhei xfonts-wqy libcanberra-gtk3-module -y
+    apt install --no-install-recommends apt-utils wget desktop-file-utils libnss3 libgtk-3-0 libx11-xcb-dev libxss1 fonts-wqy-microhei fonts-wqy-zenhei xfonts-wqy libcanberra-gtk3-module -y
 RUN cd /tmp && \
     wget http://wppkg.baidupcs.com/issue/netdisk/LinuxGuanjia/3.0.1/baidunetdisk_linux_3.0.1.2.deb && \
     dpkg -i baidunetdisk_linux_3.0.1.2.deb
