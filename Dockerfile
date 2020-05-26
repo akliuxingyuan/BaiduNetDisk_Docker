@@ -5,7 +5,8 @@ RUN apt update && \
 RUN cd /tmp && \
     wget http://wppkg.baidupcs.com/issue/netdisk/LinuxGuanjia/3.0.1/baidunetdisk_linux_3.0.1.2.deb && \
     dpkg -i baidunetdisk_linux_3.0.1.2.deb
-RUN echo root:123123|chpasswd
+RUN echo root:123123|chpasswd && \
+    touch /root/.Xauthority
 RUN apt install openssh-server -y && mkdir /var/run/sshd
 RUN sed -ri 's/^#?PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config && \
     sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config && \
