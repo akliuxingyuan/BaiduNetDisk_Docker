@@ -1,7 +1,7 @@
 # BaiduPan_Docker
 Run BaiduNetDisk_Linux in docker
 
-just run following commends
+Just run the following commands
 
 ```console
 docker pull esperare/baidunetdisk:latest
