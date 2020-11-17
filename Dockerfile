@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt update && \
-    apt install --no-install-recommends libgtk-3-0 libnotify4 libnss3 libxss1 libxtst6 xdg-utils libatspi2.0-0 libuuid1 libappindicator3-1 libsecret-1-0 openssh-server deborphan -y && \
+    apt install --no-install-recommends wget libgtk-3-0 libnotify4 libnss3 libxss1 libxtst6 xdg-utils libatspi2.0-0 libuuid1 libappindicator3-1 libsecret-1-0 openssh-server deborphan -y && \
     mkdir /var/run/sshd && \
     cd /tmp && \
     wget --no-check-certificate https://issuecdn.baidupcs.com/issue/netdisk/LinuxGuanjia/3.5.0/baidunetdisk_3.5.0_amd64.deb && \
