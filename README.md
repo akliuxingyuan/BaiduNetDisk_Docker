@@ -3,7 +3,7 @@ Run BaiduNetDisk_Linux in docker
 
 Just run the following commands
 
-```console
+```sh
 docker pull akliuxingyuan/baidunetdisk:latest
 export exposedPost = 2333  # replace to what you need
 export containerName = baidunetdisk # replace to what you want
