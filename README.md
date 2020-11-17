@@ -15,6 +15,6 @@ docker run -itd \
 you can ssh with X11 forwarding to use it
 eg:
 ```sh
-ssh -X -p $exposedPost root@$domain # password was `123123`
+ssh -X -p 2333 root@$domain # password was `123123`
 /opt/baidunetdisk/baidunetdisk
 ```
