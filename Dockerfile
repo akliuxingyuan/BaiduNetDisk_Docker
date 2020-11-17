@@ -3,7 +3,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt update && \
     apt install --no-install-recommends --assume-yes apt-utils wget desktop-file-utils libnss3 libgtk-3-0 libx11-xcb-dev libxtst6 libxss1 fonts-wqy-microhei fonts-wqy-zenhei xfonts-wqy libcanberra-gtk3-module -y
 RUN cd /tmp && \
-    wget https://issuecdn.baidupcs.com/issue/netdisk/LinuxGuanjia/3.5.0/baidunetdisk_3.5.0_amd64.deb && \
+    wget --no-check-certificate https://issuecdn.baidupcs.com/issue/netdisk/LinuxGuanjia/3.5.0/baidunetdisk_3.5.0_amd64.deb && \
     dpkg -i baidunetdisk_3.5.0_amd64.deb
 RUN echo root:123123|chpasswd && \
     touch /root/.Xauthority
